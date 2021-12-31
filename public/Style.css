@@ -22,3 +22,12 @@
 .blcolor {
   background-color: aliceblue;
 }
+
+.bgimage {
+  background-image: url(bg2.jpg);
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-size: cover;
+}
