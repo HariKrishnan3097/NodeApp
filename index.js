@@ -68,27 +68,29 @@ app.post("/login", function (req, res) {
     var Res = JSON.stringify(data);
     var json = JSON.parse(Res);
     if (json[0].Password == Password) {
-      res.render("Result", {
-        Name: json[0].Name,
-        DOB: json[0].DOB,
-        Department: json[0].Department,
+      connection.query(sql2, function (err, data1) {
+        if (err) throw err;
+        var Res = JSON.stringify(data1);
+        var json1 = JSON.parse(Res);
+        console.log(json1);
+
+        res.render("Result", {
+          Name: json[0].Name,
+          DOB: json[0].DOB,
+          Department: json[0].Department,
+          Maths: json1[0].Maths,
+          CS: json1[0].CS,
+          SignalsandSystems: json1[0].SignalsandSystems,
+          DSP: json1[0].DSP,
+          Physics: json1[0].Physics,
+          EngineeringGraphics: json1[0].EngineeringGraphics,
+        });
       });
       console.log(json);
     } else {
       res.render("StudentLogin");
       console.log("Password is wrong");
     }
-  });
-
-  connection.query(sql2, function (err, data1) {
-    if (err) throw err;
-    var Res = JSON.stringify(data1);
-    var json1 = JSON.parse(Res);
-    console.log(json1);
-    res.render("Result", {
-      CS: json1[0].CS,
-      Maths: json1[0].Maths,
-    });
   });
 });
 
