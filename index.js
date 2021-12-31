@@ -4,6 +4,7 @@ const app = express();
 const path = require("path");
 let mysql = require("mysql2");
 const { body, validationResult } = require("express-validator");
+var nodemailer = require("nodemailer");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
