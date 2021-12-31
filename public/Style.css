@@ -1,0 +1,24 @@
+.divs_style {
+  visibility: hidden;
+  color: red;
+  margin-left: 10px;
+}
+
+.center-align {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.buttonspace {
+  margin-top: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.blcolor {
+  background-color: aliceblue;
+}

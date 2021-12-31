@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <title>Mark Portal</title>
+    <link
+      rel="stylesheet"
+      href="bower_components/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="StudentRegistration">Student Registration</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Admin">Admin Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="StudentLogin">Student Login</a>
+    </li>
+    </li>
+  </ul>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+          <div
+            class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden"
+          >
+            <div class="card-img-left d-none d-md-flex">
+              <!-- Background image for card set in CSS! -->
+            </div>
+            <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5 fw-bold">
+                Student Registration Form
+              </h5>
+              <form name="studentRegisterForm" onsubmit="return validateForm()" action="/Register"  method="POST">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Username"
+                    placeholder="Username"
+                    required
+                    name="Name"
+                    autofocus
+                  />
+                  <label for="Username">Username</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="Password"
+                    name="Password"
+                    required
+                    placeholder="Password"
+                  />
+                  <label for="Password">Password</label>
+                  <div id="Password_Error" class="divs_style"> **Password should match and case sensitive** </div>
+
+                </div>
+
+                
+                <div class="form-floating mb-3">
+                  <input
+                    type="Password"
+                    class="form-control"
+                    id="ConfirmPassword"
+                    name="ConfirmPassword"
+                    required
+                    placeholder="Confirm password"
+                  />
+                  <label for="ConfirmPassword">Confirm password</label>
+                  <div id="Password_Error" class="divs_style"> **Password should match and case sensitive**</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <select class="form-control" id="departmentSelect1" name="Department" >
+                    <option>ECE</option>
+                    <option>EEE</option>
+                    <option>CS</option>
+                    <option>MECH</option>
+                    <option>CIVIL</option>
+                  </select>
+                  <label for="departmentSelect1">Department</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="DOB"
+                    name="DOB"
+                  />
+                  <label for="DOB">Date Of Birth (DD-MM-YYYY)</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <select class="form-control" id="gender" name="gender" >
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Others</option>
+                  </select>
+                  <label for="gender">Gender</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="Email" name="Email"  aria-describedby="emailHelp" placeholder="Enter email">
+                  <label for="Email">Email address</label>
+                </div>
+
+                                
+                <div class="form-floating mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="Mobile"
+                    name="Mobile"
+                    required
+                    placeholder="+91"
+                    pattern="[789][0-9]{9}"
+                  />
+                  <label for="Mobile">Mobile Number</label>
+                </div>
+
+
+                <div class="d-grid mb-2">
+                  <button
+                    class="
+                      btn btn-lg btn-primary btn-login
+                      fw-bold
+                      text-uppercase
+                    "
+                    type="submit"
+                  >
+                    Register
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+
+
+
+
+
+  <script>
+    function validateForm() {
+          var Password = document.getElementById("Password").value;
+          var ConfirmPassword = document.getElementById("ConfirmPassword").value; 
+          var phone  = document.getElementById("Mobile").value;
+         
+          document.getElementById("Password_Error").style.visibility = "hidden";
+
+          //document.getElementById("Mobile_Error").style.visibility = "hidden";
+
+
+     if(Password == ConfirmPassword)
+     {
+     document.getElementById("Password_Error").style.visibility = "hidden";
+     return true;
+     }
+    else
+     {
+    document.getElementById("Password_Error").style.visibility = "visible";
+    return false;
+    }
+ }
+</script>
+</html>

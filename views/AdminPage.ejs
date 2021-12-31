@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <title>Mark Portal</title>
+    <link
+      rel="stylesheet"
+      href="bower_components/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+          <div
+            class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden"
+          >
+            <div class="card-img-left d-none d-md-flex">
+              <!-- Background image for card set in CSS! -->
+            </div>
+            <div class="card-body p-4 p-sm-5 blcolor">
+              <h2 class="card-title text-center mb-5 fw-light fs-5 fw-bold">
+                Result
+              </h2>
+
+              <form name="AdminForm" action="/Upload" method="POST">
+                <label for="RegNumber" class="bold">Register Number</label>
+                <div class="form-floating mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="RegNumber"
+                    name="RegNumber"
+                    required
+                  />
+                </div>
+
+                <label for="EngineeringGraphics" class="bold"
+                  >Engineering Graphics</label
+                >
+                <div class="form-floating mb-3">
+                  <select
+                    class="form-control"
+                    id="EngineeringGraphics"
+                    name="EngineeringGraphics"
+                  >
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>U</option>
+                  </select>
+                </div>
+
+                <label for="SignalsandSystems" class="bold"
+                  >Signals and Systems</label
+                >
+                <div class="form-floating mb-3">
+                  <select
+                    class="form-control"
+                    id="SignalsandSystems"
+                    name="SignalsandSystems"
+                  >
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>U</option>
+                  </select>
+                </div>
+
+                <label for="Maths" class="bold">Maths</label>
+                <div class="form-floating mb-3">
+                  <select class="form-control" id="Maths" name="Maths">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>U</option>
+                  </select>
+                </div>
+
+                <label for="CS" class="bold">CS</label>
+                <div class="form-floating mb-3">
+                  <select class="form-control" id="CS" name="CS">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>U</option>
+                  </select>
+                </div>
+
+                <label for="DSP" class="bold">DSP</label>
+                <div class="form-floating mb-3">
+                  <select class="form-control" id="DSP" name="DSP">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>U</option>
+                  </select>
+                </div>
+
+                <label for="Physics" class="bold">Physics</label>
+                <div class="form-floating mb-3">
+                  <select class="form-control" id="Physics" name="Physics">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>U</option>
+                  </select>
+                </div>
+
+                <div class="d-grid mb-2">
+                  <button
+                    class="
+                      btn btn-lg btn-primary btn-login
+                      fw-bold
+                      text-uppercase
+                    "
+                    type="submit"
+                  >
+                    Upload
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

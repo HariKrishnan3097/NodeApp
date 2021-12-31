@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Mark Portal</title>
+    <link
+      rel="stylesheet"
+      href="bower_components/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="StudentRegistration">Student Registration</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Admin">Admin Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="StudentLogin">Student Login</a>
+    </li>
+    </li>
+  </ul>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+          <div
+            class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden"
+          >
+            <div class="card-img-left d-none d-md-flex">
+              <!-- Background image for card set in CSS! -->
+            </div>
+            <div class="card-body p-4 p-sm-5 blcolor">
+              <h2 class="card-title text-center mb-5 fw-light fs-5 fw-bold">
+                Result
+              </h2>
+
+              <label class="bold">  Name : <%= Name%> </label>
+              <br>
+              <br>
+
+              <label class="bold"> Date.of.Birth : <%= DOB%> </label>
+              <br>
+              <br>
+
+              <label class="bold"> Department : <%= Department%> </label>
+              <br>
+              <br>
+
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>CS</td>
+                    <td> E</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Maths</td>
+                    <td>E</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

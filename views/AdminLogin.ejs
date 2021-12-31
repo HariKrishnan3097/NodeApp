@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Mark Portal</title>
+    <link
+      rel="stylesheet"
+      href="bower_components/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="StudentRegistration">Student Registration</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Admin">Admin Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="StudentLogin">Student Login</a>
+    </li>
+    </li>
+  </ul>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+          <div
+            class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden"
+          >
+            <div class="card-img-left d-none d-md-flex">
+              <!-- Background image for card set in CSS! -->
+            </div>
+            <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5 fw-bold">
+                Admin Login
+              </h5>
+              <form name="studentRegisterForm" action="/Adminlogin"  method="POST">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Name"
+                    placeholder="Username"
+                    required
+                    name="Name"
+                    autofocus
+                  />
+                  <label for="Name">Username</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="Password"
+                    name="Password"
+                    required
+                    placeholder="Password"
+                  />
+                  <label for="Password">Password</label>
+                </div>
+
+                <div class="d-grid mb-2">
+                  <button
+                    class="
+                      btn btn-lg btn-primary btn-login
+                      fw-bold
+                      text-uppercase
+                    "
+                    type="submit"
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
